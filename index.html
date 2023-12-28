@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Card Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Concert+One|Nova+Slim">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function() {
+            $(startButton).click(function() {
+                start();
+            });
+        });            
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Card Matching Game</h1>
+        </header>
+        <section class="score-table">
+            <ul class="stars">
+                <li>
+                    <i id="star1" class="fa fa-star"></i>
+                </li>
+                <li>
+                    <i id="star2" class="fa fa-star"></i>
+                </li>
+                <li>
+                    <i id="star3" class="fa fa-star"></i>
+                </li>
+            </ul>
+            <span class="moves">Moves: 0</span>
+            <span class="timer">Elapsed Time: 0:00</span>
+            <div class="restart">
+                <i class="fa fa-repeat"></i>
+            </div>
+            <button class="show-hints" onclick="ShowHints()">3 Hints left</button>
+        </section>
+        <main>
+            <ul class="deck">
+                <button class="start-game" id="start-game">Start Game</button>
+            </ul>
+        </main>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close-button">x</span>
+                <i class="fa fa-check-circle tick"></i>
+                <h1 class="modal-heading">Congratulations! You Won!!</h1>
+                <h3 class="stats"></h3>
+                <button class="new-game">Play Again!</button>                    
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
